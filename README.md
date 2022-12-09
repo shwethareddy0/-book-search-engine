@@ -4,7 +4,7 @@
 
 Book Search Engine is a CMS application where developers can publish their blog posts and comment on other developers’ posts as well.
 
-Here is the link to the [deployed application]()
+Here is the link to the [deployed application](https://sp-book-search-engine.herokuapp.com/)
 
 ### Features
 
