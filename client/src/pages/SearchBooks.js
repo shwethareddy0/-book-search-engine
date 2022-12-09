@@ -75,7 +75,7 @@ const SearchBooks = () => {
 
     try {
       const response = await saveBook({
-        variables: { ...bookToSave },
+        variables: { savedBookIds },
       });
 
       if (!response.ok) {
