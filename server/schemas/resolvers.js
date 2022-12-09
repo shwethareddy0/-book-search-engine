@@ -43,17 +43,16 @@ const resolvers = {
       }
       throw new AuthenticationError("You need to log in");
     },
-  },
-
-  saveBook: async (parent, { bookData }, context) => {
-    if (context.user) {
-      return User.findOneAndUpdate(
-        { _id: context.user._id },
-        { $addToSet: { savedBooks: bookData } },
-        { new: true }
-      );
-    }
-    throw new AuthenticationError("You need to log in");
+    saveBook: async (parent, { bookData }, context) => {
+      if (context.user) {
+        return User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { savedBooks: bookData } },
+          { new: true }
+        );
+      }
+      throw new AuthenticationError("You need to log in");
+    },
   },
 };
 
